@@ -48,9 +48,6 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-// Health Check
-app.use("/health", router);
-
 Database.connect(app, function(err) {
     if (err) {
         console.log('Failed to connect to database server');
