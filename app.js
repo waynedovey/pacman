@@ -49,8 +49,10 @@ app.use(function(err, req, res, next) {
 
 // Health Check
 
-// app.js: register the route. In our case, we don't want authorization for this route
-app.use('/healthcheck', require('./routes/healthcheck.routes'));
+router.get('/', function (req, res, next) {
+    res.json({status: 'UP'});
+  });
+app.use("/health", router);
 
 Database.connect(app, function(err) {
     if (err) {
