@@ -25,6 +25,7 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 app.use('/highscores', highscores);
 app.use('/user', user);
 app.use('/location', loc);
+app.use('/healthcheck', require('./routes/healthcheck.routes'));
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
