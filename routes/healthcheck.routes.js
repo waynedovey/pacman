@@ -1,7 +1,7 @@
 var express = require('express');
 
 // healthcheck.routes.js: return a 2xx response when your server is healthy, else send a 5xx response
-//import express from 'express';
+import express from 'express';
 
 const router = express.Router({});
 router.get('/', async (_req, res, _next) => {
