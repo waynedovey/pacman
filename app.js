@@ -48,10 +48,6 @@ app.use(function(err, req, res, next) {
 });
 
 // Health Check
-
-router.get('/', function (req, res, next) {
-    res.json({status: 'UP'});
-  });
 app.use("/health", router);
 
 Database.connect(app, function(err) {
