@@ -52,9 +52,6 @@ app.use(function(err, req, res, next) {
 // app.js: register the route. In our case, we don't want authorization for this route
 app.use('/healthcheck', require('./routes/healthcheck.routes'));
 
-// healthcheck.routes.js: return a 2xx response when your server is healthy, else send a 5xx response
-import express from 'express';
-
 const router = express.Router({});
 router.get('/', async (_req, res, _next) => {
 	// optional: add further things to check (e.g. connecting to dababase)
