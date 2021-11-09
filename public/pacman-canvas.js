@@ -276,6 +276,7 @@ function geronimo() {
         this.pause = true;
         this.cloudProvider = '';
         this.zone = '';
+        this.environment = '';
         this.host = '';
         this.user = new User();
         this.score = new Score();

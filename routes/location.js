@@ -431,9 +431,16 @@ function getK8sCloudMetadata(callback) {
     req.end();
 }
 
+// function getHost() {
+//     console.log('[getHost]');
+//     var host = os.hostname();
+//     console.log(`HOST: ${host}`);
+//     return host;
+// }
+
 function getHost() {
     console.log('[getHost]');
-    var host = os.hostname();
+    var host = process.env.ENVIRONMENT();
     console.log(`HOST: ${host}`);
     return host;
 }
