@@ -85,6 +85,7 @@ tr:hover {
 #playername {}
 #cloudprovider {}
 #zone {}
+#environment {}
 #host {}
 #score {}
 #userid {}
@@ -134,10 +135,11 @@ audio {display: block; }
 
 .cloudprovider { width: inherit; }
 .zone { width: inherit; }
+.environment { width: inherit; }
 .host { width: inherit; }
 .time { width: 290px; }
 .score { width: 290px; }
-.score, .lives, .level, .cloudprovider, .zone, .host, .time { display: inline-block; }
+.score, .lives, .level, .cloudprovider, .zone, .environment, .host, .time { display: inline-block; }
 
 /* ---------- Controls ------------------------*/
 
