@@ -453,7 +453,7 @@ function getEnvironment() {
 
 function getAppversion() {
     console.log('[getAppversion]');
-    var appversion = process.env.APPVERSION;
+    var appversion = process.env.APP_VERSION;
     console.log(`APPVERSION: ${appversion}`);
     return appversion;
 }
