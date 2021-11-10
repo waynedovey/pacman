@@ -86,6 +86,7 @@ tr:hover {
 #cloudprovider {}
 #zone {}
 #environment {}
+#appversion {}
 #host {}
 #score {}
 #userid {}
@@ -136,10 +137,11 @@ audio {display: block; }
 .cloudprovider { width: inherit; }
 .zone { width: inherit; }
 .environment { width: inherit; }
+.appversion { width: inherit; }
 .host { width: inherit; }
 .time { width: 290px; }
 .score { width: 290px; }
-.score, .lives, .level, .cloudprovider, .zone, .environment, .host, .time { display: inline-block; }
+.score, .lives, .level, .cloudprovider, .zone, .environment, appversion, .host, .time { display: inline-block; }
 
 /* ---------- Controls ------------------------*/
 

@@ -15,16 +15,19 @@ router.get('/metadata', function(req, res, next) {
     console.log('[GET /loc/metadata]');
     var h = getHost();
     var e = getEnvironment();
+    var a = getAppversion();
     getCloudMetadata(function(c, z) {
         console.log(`CLOUD: ${c}`);
         console.log(`ZONE: ${z}`);
         console.log(`HOST: ${h}`);
         console.log(`ENVIRONMENT: ${e}`);
+        console.log(`APPVERSION: ${a}`);
         res.json({
             cloud: c,
             zone: z,
             host: h,
-            environment: e
+            environment: e,
+            appversion: a
         });
     });
 });
@@ -444,9 +447,15 @@ function getHost() {
 function getEnvironment() {
     console.log('[getEnvironment]');
     var environment = process.env.ENVIRONMENT;
-    // var environment = "test";
     console.log(`ENVIRONMENT: ${environment}`);
     return environment;
+}
+
+function getAppversion() {
+    console.log('[getAppversion]');
+    var appversion = process.env.APPVERSION;
+    console.log(`APPVERSION: ${appversion}`);
+    return appversion;
 }
 
 module.exports = router;

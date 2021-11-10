@@ -115,6 +115,8 @@ function geronimo() {
                 game.host = msg['host'];
                 $(".environment").append("<b>" + msg['environment'] + "</b>");
                 game.environment = msg['environment'];
+                $(".appversion").append("<b>" + msg['appversion'] + "</b>");
+                game.appversion = msg['appversion'];
             },
             error: function() {
                 $(".cloudprovider").append("<b>unknown</b>");
@@ -124,7 +126,9 @@ function geronimo() {
                 $(".host").append("<b>unknown</b>");
                 game.host = 'unknown';
                 $(".environment").append("<b>unknown</b>");
-                game.environment = 'unknown';        
+                game.environment = 'unknown';
+                $(".appversion").append("<b>unknown</b>");
+                game.appversion = 'unknown';
             }
         });
     }
@@ -281,6 +285,7 @@ function geronimo() {
         this.cloudProvider = '';
         this.zone = '';
         this.environment = '';
+        this.appversion = '';
         this.host = '';
         this.user = new User();
         this.score = new Score();
