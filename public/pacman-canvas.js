@@ -113,6 +113,8 @@ function geronimo() {
                 game.zone = msg['zone'];
                 $(".host").append("<b>" + msg['host'] + "</b>");
                 game.host = msg['host'];
+                $(".environment").append("<b>" + msg['environment'] + "</b>");
+                game.environment = msg['environment'];
             },
             error: function() {
                 $(".cloudprovider").append("<b>unknown</b>");
@@ -121,6 +123,8 @@ function geronimo() {
                 game.zone = 'unknown';
                 $(".host").append("<b>unknown</b>");
                 game.host = 'unknown';
+                $(".environment").append("<b>unknown</b>");
+                game.environment = 'unknown';        
             }
         });
     }

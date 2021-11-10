@@ -14,14 +14,17 @@ router.use(function timeLog(req, res, next) {
 router.get('/metadata', function(req, res, next) {
     console.log('[GET /loc/metadata]');
     var h = getHost();
+    var e = getEnvironment();
     getCloudMetadata(function(c, z) {
         console.log(`CLOUD: ${c}`);
         console.log(`ZONE: ${z}`);
         console.log(`HOST: ${h}`);
+        console.log(`ENVIRONMENT: ${e}`);
         res.json({
             cloud: c,
             zone: z,
-            host: h
+            host: h,
+            environment: e
         });
     });
 });
@@ -438,11 +441,12 @@ function getHost() {
     return host;
 }
 
-// function getHost() {
-//     console.log('[getHost]');
-//     var host = process.env.ENVIRONMENT();
-//     console.log(`HOST: ${host}`);
-//     return host;
-// }
+function getEnvironment() {
+    console.log('[getEnvironment]');
+    var environment = process.env.ENVIRONMENT();
+    // var environment = "test";
+    console.log(`ENVIRONMENT: ${environment}`);
+    return environment;
+}
 
 module.exports = router;
