@@ -443,8 +443,8 @@ function getHost() {
 
 function getEnvironment() {
     console.log('[getEnvironment]');
-    // var environment = process.env.ENVIRONMENT();
-    var environment = "test";
+    var environment = process.env.ENVIRONMENT;
+    // var environment = "test";
     console.log(`ENVIRONMENT: ${environment}`);
     return environment;
 }
